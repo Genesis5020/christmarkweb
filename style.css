@@ -1,7 +1,7 @@
 /* 
 =============================================
 FILE NAME: style.css
-UPDATED: Added horizontal scrollable certificate gallery
+UPDATED: Added horizontal scrollable certificate gallery + Fixed mobile navigation overlap
 =============================================
 */
 
@@ -506,25 +506,64 @@ h2::after {
 /* ------ RESPONSIVE DESIGN ------ */
 @media (max-width: 768px) {
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
+
+  .profile-img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* ✅ FIX: Make nav horizontal scrollable + reduce size */
+  .nav-buttons {
+    padding: 8px 0;
+  }
+
   .nav-buttons .container {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-bottom: 6px;
   }
+
+  /* Custom scrollbar for nav on mobile */
+  .nav-buttons .container::-webkit-scrollbar {
+    height: 3px;
+  }
+  .nav-buttons .container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* ✅ FIX: Add space so content is not hidden under sticky nav */
+  .section {
+    padding-top: 85px;
+  }
+
   .contact-links {
     flex-direction: column;
     gap: 10px;
   }
+
   .timeline::before {
     left: 20px;
   }
+
   .timeline-item {
     padding-left: 40px;
   }
+
   .cert-gallery {
     padding: 10px;
   }
+
   .cert-item {
     width: 220px;
   }
