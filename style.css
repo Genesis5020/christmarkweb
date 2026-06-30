@@ -3,6 +3,7 @@
 FILE NAME: style.css
 PURPOSE: Controls all design, layout, colors, and responsiveness
 UPDATED: Added styles for new buttons, clear comments for each section
+UPDATED: Added horizontal scrollable certificate gallery + Fixed mobile navigation overlap
 =============================================
 */
 
@@ -568,7 +569,11 @@ Adjustments for small screens
     height: 120px;
   }
 
+<<<<<<< HEAD
   /* Make nav scrollable horizontally on mobile */
+=======
+  /* ✅ FIX: Make nav horizontal scrollable + reduce size */
+>>>>>>> d11c9b938f2f22a65f54afac6ff1630a57a1e24b
   .nav-buttons {
     padding: 8px 0;
   }
@@ -581,6 +586,10 @@ Adjustments for small screens
     padding-bottom: 6px;
   }
 
+<<<<<<< HEAD
+=======
+  /* Custom scrollbar for nav on mobile */
+>>>>>>> d11c9b938f2f22a65f54afac6ff1630a57a1e24b
   .nav-buttons .container::-webkit-scrollbar {
     height: 3px;
   }
@@ -595,7 +604,11 @@ Adjustments for small screens
     white-space: nowrap;
   }
 
+<<<<<<< HEAD
   /* Prevent content from being hidden under fixed menu */
+=======
+  /* ✅ FIX: Add space so content is not hidden under sticky nav */
+>>>>>>> d11c9b938f2f22a65f54afac6ff1630a57a1e24b
   .section {
     padding-top: 85px;
   }
