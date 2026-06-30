@@ -1,47 +1,46 @@
 /* 
 =============================================
 FILE NAME: style.css
-PURPOSE: Controls all design, layout, colors, and responsiveness
-UPDATED: Added styles for new buttons, clear comments for each section
-UPDATED: Added horizontal scrollable certificate gallery + Fixed mobile navigation overlap
+PURPOSE: Controls design, layout, colors, and responsiveness
+UPDATED: Fixed dark mode visibility issues — all text/buttons now clear
 =============================================
 */
 
 /* --------------------------
 BASE COLORS & VARIABLES
-These make it easy to change colors in one place
 -------------------------- */
 :root {
-  --primary: #0f172a;       /* Main dark blue color */
-  --secondary: #1e293b;     /* Secondary dark color */
-  --accent: #0ea5e9;        /* Bright blue highlight */
-  --highlight: #38bdf8;     /* Lighter blue hover effect */
-  --gold: #f59e0b;          /* Gold accent color */
-  --text: #334155;          /* Normal text color */
-  --light: #f8fafc;         /* Light background */
-  --white: #ffffff;         /* White background */
-  --shadow: 0 4px 12px rgba(0,0,0,0.1); /* Standard shadow */
-  --transition: all 0.3s ease; /* Smooth animation speed */
+  --primary: #0f172a;
+  --secondary: #1e293b;
+  --accent: #0ea5e9;
+  --highlight: #38bdf8;
+  --gold: #f59e0b;
+  --text: #1e293b;          /* Normal text - darker for light mode */
+  --light-text: #f1f5f9;    /* Light text for dark mode */
+  --light: #f8fafc;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
 }
 
 /* --------------------------
-DARK MODE COLORS
-Applied when dark mode is turned on
+✅ FIXED DARK MODE COLORS
+All text and backgrounds now have proper contrast
 -------------------------- */
 .dark-mode {
   --primary: #000000;
   --secondary: #0a0a0a;
-  --accent: #38bdf8;
+  --accent: #38bdf8;        /* Bright blue - easy to see */
   --highlight: #7dd3fc;
-  --text: #e2e8f0;
-  --light: #050505;
-  --white: #0a0a0a;
+  --gold: #fbbf24;          /* Brighter gold for dark mode */
+  --text: #f1f5f9;          /* White/light gray text - very visible */
+  --light: #0f172a;         /* Dark blue background */
+  --white: #1e293b;         /* Card background - not pure black */
   --shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 /* --------------------------
 STARRY BACKGROUND
-Only visible in Dark Mode
 -------------------------- */
 .bg {
     position: fixed;
@@ -61,8 +60,7 @@ Only visible in Dark Mode
 }
 
 /* --------------------------
-GENERAL RESET & BASE STYLES
-Removes default browser styles and sets base font
+GENERAL RESET
 -------------------------- */
 * {
   margin: 0;
@@ -85,8 +83,7 @@ body {
 }
 
 /* --------------------------
-HEADER SECTION STYLES
-Design for top part with profile and name
+HEADER
 -------------------------- */
 .header {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -105,7 +102,6 @@ Design for top part with profile and name
   flex-wrap: wrap;
 }
 
-/* Profile Image Style */
 .profile-img img {
   width: 180px;
   height: 180px;
@@ -137,13 +133,12 @@ Design for top part with profile and name
 }
 
 /* --------------------------
-BUTTON STYLES
-Shared design for all buttons
+BUTTONS
 -------------------------- */
 .btn {
   display: inline-block;
   background: var(--accent);
-  color: var(--white);
+  color: #ffffff;
   padding: 12px 30px;
   border-radius: 6px;
   text-decoration: none;
@@ -160,31 +155,31 @@ Shared design for all buttons
   box-shadow: var(--shadow);
 }
 
-/* Special style for Cyber Lab button */
 .project-btn {
   background: var(--gold);
+  color: #000000; /* Black text on gold for readability */
 }
 
 .project-btn:hover {
-  background: #fbbf24;
+  background: #fcd34d;
 }
 
-/* Special style for View All Projects button */
 .view-all-btn {
   background: var(--secondary);
+  color: #ffffff;
 }
 
 .view-all-btn:hover {
-  background: var(--primary);
+  background: var(--accent);
 }
 
-/* Dark Mode Button */
 .dark-mode-btn {
   background: var(--secondary);
+  color: #ffffff;
 }
 
 .dark-mode-btn:hover {
-  background: var(--text);
+  background: var(--accent);
 }
 
 .next-btn-wrapper {
@@ -193,8 +188,7 @@ Shared design for all buttons
 }
 
 /* --------------------------
-NAVIGATION MENU STYLES
-Fixed menu at the top when scrolling
+NAVIGATION
 -------------------------- */
 .nav-buttons {
   background: var(--primary);
@@ -222,18 +216,15 @@ Fixed menu at the top when scrolling
   font-weight: 700;
   transition: var(--transition);
   font-size: 1rem;
-  text-shadow: 0 0 6px rgba(56, 189, 248, 0.4);
 }
 
 .nav-btn:hover {
   background: var(--accent);
   color: #000000 !important;
-  text-shadow: none;
 }
 
 /* --------------------------
-GENERAL SECTION STYLES
-Used for all main content areas
+SECTIONS
 -------------------------- */
 .section {
   padding: 60px 0;
@@ -272,6 +263,7 @@ h2::after {
   border-radius: 8px;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  color: var(--text);
 }
 
 .info-block:hover {
@@ -290,8 +282,7 @@ h2::after {
 }
 
 /* --------------------------
-SKILLS GRID LAYOUT
-Cards showing different skills
+SKILLS GRID
 -------------------------- */
 .skills-grid {
   display: grid;
@@ -307,6 +298,7 @@ Cards showing different skills
   box-shadow: var(--shadow);
   text-align: center;
   transition: var(--transition);
+  color: var(--text);
 }
 
 .skill-card:hover {
@@ -320,8 +312,7 @@ Cards showing different skills
 }
 
 /* --------------------------
-TIMELINE LAYOUT
-For experience section
+TIMELINE
 -------------------------- */
 .timeline {
   position: relative;
@@ -356,10 +347,11 @@ For experience section
   padding: 20px;
   border-radius: 8px;
   box-shadow: var(--shadow);
+  color: var(--text);
 }
 
 /* --------------------------
-EDUCATION SECTION
+EDUCATION
 -------------------------- */
 .education-list .edu-item {
   background: var(--white);
@@ -367,11 +359,11 @@ EDUCATION SECTION
   border-radius: 8px;
   box-shadow: var(--shadow);
   margin-bottom: 15px;
+  color: var(--text);
 }
 
 /* --------------------------
-CERTIFICATE GALLERY
-Horizontal scrollable design
+CERTIFICATES GALLERY
 -------------------------- */
 .cert-gallery {
   display: flex;
@@ -404,6 +396,7 @@ Horizontal scrollable design
   padding: 15px;
   text-align: center;
   transition: var(--transition);
+  color: var(--text);
 }
 .cert-item:hover {
   transform: translateY(-5px);
@@ -427,7 +420,7 @@ Horizontal scrollable design
 }
 
 /* --------------------------
-PORTFOLIO GRID
+PORTFOLIO
 -------------------------- */
 .portfolio-grid {
   display: grid;
@@ -442,6 +435,7 @@ PORTFOLIO GRID
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  color: var(--text);
 }
 
 .portfolio-item:hover {
@@ -465,7 +459,7 @@ PORTFOLIO GRID
 }
 
 /* --------------------------
-FAQ SECTION
+FAQ
 -------------------------- */
 .faq-item {
   margin-bottom: 15px;
@@ -473,6 +467,7 @@ FAQ SECTION
   border-radius: 8px;
   overflow: hidden;
   background: var(--white);
+  color: var(--text);
 }
 
 .faq-question {
@@ -488,7 +483,7 @@ FAQ SECTION
 
 .faq-question:hover {
   background: var(--accent);
-  color: var(--white);
+  color: #ffffff;
 }
 
 .faq-answer {
@@ -516,7 +511,7 @@ FAQ SECTION
 }
 
 /* --------------------------
-CONTACT SECTION
+CONTACT
 -------------------------- */
 .contact-details {
   text-align: center;
@@ -525,6 +520,7 @@ CONTACT SECTION
   padding: 30px;
   border-radius: 8px;
   box-shadow: var(--shadow);
+  color: var(--text);
 }
 
 .contact-details p {
@@ -551,13 +547,12 @@ CONTACT SECTION
 }
 
 .contact-link:hover {
-  color: var(--white);
+  color: #ffffff;
   background: var(--accent);
 }
 
 /* --------------------------
-MOBILE RESPONSIVE DESIGN
-Adjustments for small screens
+MOBILE RESPONSIVE
 -------------------------- */
 @media (max-width: 768px) {
   .header h1 {
@@ -569,11 +564,6 @@ Adjustments for small screens
     height: 120px;
   }
 
-<<<<<<< HEAD
-  /* Make nav scrollable horizontally on mobile */
-=======
-  /* ✅ FIX: Make nav horizontal scrollable + reduce size */
->>>>>>> d11c9b938f2f22a65f54afac6ff1630a57a1e24b
   .nav-buttons {
     padding: 8px 0;
   }
@@ -586,10 +576,6 @@ Adjustments for small screens
     padding-bottom: 6px;
   }
 
-<<<<<<< HEAD
-=======
-  /* Custom scrollbar for nav on mobile */
->>>>>>> d11c9b938f2f22a65f54afac6ff1630a57a1e24b
   .nav-buttons .container::-webkit-scrollbar {
     height: 3px;
   }
@@ -604,11 +590,6 @@ Adjustments for small screens
     white-space: nowrap;
   }
 
-<<<<<<< HEAD
-  /* Prevent content from being hidden under fixed menu */
-=======
-  /* ✅ FIX: Add space so content is not hidden under sticky nav */
->>>>>>> d11c9b938f2f22a65f54afac6ff1630a57a1e24b
   .section {
     padding-top: 85px;
   }
