@@ -2,43 +2,52 @@
 =============================================
 WEBSITE: Christmark A. Barlam - SOC Analyst / Cybersecurity Specialist
 FILE NAME: index.html
-UPDATED: Dark mode button visible always + added profile image + scrollable certificate gallery + latest content updates
+UPDATED: 
+- Replaced "Download Resume" button with "Cyber Lab Simulator Project" link
+- Added button in Portfolio section for Canva Projects link
+- Replaced Messenger icon with Facebook icon and updated link
+- Added clear comments/captions for easy understanding
 =============================================
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set, responsiveness, and title -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Christmark A. Barlam | SOC Analyst & Cybersecurity Specialist</title>
+  <!-- Link to CSS stylesheet and Font Awesome icons -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- ✅ STARRY BACKGROUND -->
+  <!-- ✅ STARRY BACKGROUND - Only visible when Dark Mode is ON -->
   <div class="bg"></div>
 
-  <!-- HEADER -->
+  <!-- =============================================
+  HEADER SECTION: Profile photo, name, title, and main buttons
+  ============================================= -->
   <header class="header">
     <div class="container">
       <div class="header-content">
+        <!-- Profile Image -->
         <div class="profile-img">
-          <!-- ✅ YOUR PROFILE IMAGE ADDED EXACTLY AS YOU WANTED -->
           <img src="./Images/profile.jpg" alt="Profile Photo" class="profile-img">
         </div>
         <div class="header-text">
           <h1>Christmark A. Barlam</h1>
           <p class="subtitle">SOC Analyst | Cybersecurity Specialist | Computer Engineer</p>
-          
           <p>Securing digital assets, monitoring threats, and protecting systems from cyberattacks.</p>
+          
+          <!-- Header Buttons Area -->
           <div class="header-buttons">
-            
-            <a href="resume.pdf" class="btn download-btn" download>
-              <i class="fas fa-download"></i> Download Resume
+            <!-- ✅ UPDATED: Replaced Download Resume with Cyber Lab Simulator Project -->
+            <a href="https://genesis5020-cyberlab-z99z.vercel.app/" target="_blank" class="btn project-btn">
+              <i class="fas fa-shield-alt"></i> Cyber Lab Simulator Project
             </a>
-            <!-- ✅ DARK MODE BUTTON — VISIBLE ALWAYS -->
+            <!-- Dark Mode Toggle Button -->
             <button id="darkModeToggle" class="btn dark-mode-btn">
               <i class="fas fa-moon"></i>
             </button>
@@ -48,7 +57,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </header>
 
-  <!-- NAVIGATION -->
+  <!-- =============================================
+  NAVIGATION MENU: Links to jump to different sections
+  ============================================= -->
   <nav class="nav-buttons">
     <div class="container">
       <a href="#about" class="nav-btn">About Me</a>
@@ -62,7 +73,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </nav>
 
-  <!-- ABOUT SECTION -->
+  <!-- =============================================
+  ABOUT ME SECTION: Career objective and personal summary
+  ============================================= -->
   <section class="section" id="about">
     <div class="container">
       <h2>About Me</h2>
@@ -88,7 +101,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
-  <!-- SKILLS SECTION -->
+  <!-- =============================================
+  SKILLS SECTION: Technical and professional abilities
+  ============================================= -->
   <section class="section bg-light" id="skills">
     <div class="container">
       <h2>Technical & Professional Skills</h2>
@@ -132,7 +147,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
-  <!-- EXPERIENCE SECTION -->
+  <!-- =============================================
+  EXPERIENCE SECTION: Work and internship history
+  ============================================= -->
   <section class="section" id="experience">
     <div class="container">
       <h2>Work & Internship Experience</h2>
@@ -187,7 +204,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
-  <!-- EDUCATION SECTION -->
+  <!-- =============================================
+  EDUCATION SECTION: Schools and courses taken
+  ============================================= -->
   <section class="section bg-light" id="education">
     <div class="container">
       <h2>Education Background</h2>
@@ -216,138 +235,139 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
-  <!-- CERTIFICATES SECTION — ✅ SCROLLABLE GALLERY -->
-<section class="section" id="certificates">
-  <div class="container">
-    <h2>Certifications & Training</h2>
-    <p class="note">Scroll left or right to view all certificates</p>
+  <!-- =============================================
+  CERTIFICATES SECTION: Scrollable gallery of training and certifications
+  ============================================= -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <h2>Certifications & Training</h2>
+      <p class="note">Scroll left or right to view all certificates</p>
 
-    <div class="cert-gallery">
-      <!-- 2026 -->
-      <div class="cert-item">
-        <img src="./images/cert1.jpg" alt="Introduction to Cybersecurity - Cisco">
-        <h3>Introduction to Cybersecurity</h3>
-        <p>Cisco • June 08, 2026</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert2.jpg" alt="Cyber Threat Monitoring Level I - TESDA">
-        <h3>Cyber Threat Monitoring Level I</h3>
-        <p>TESDA • May 30, 2026</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert3.jpg" alt="Cyber Threat Management - Cisco">
-        <h3>Cyber Threat Management</h3>
-        <p>Cisco • May 29, 2026</p>
-      </div>
+      <div class="cert-gallery">
+        <!-- 2026 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert1.jpg" alt="Introduction to Cybersecurity - Cisco">
+          <h3>Introduction to Cybersecurity</h3>
+          <p>Cisco • June 08, 2026</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert2.jpg" alt="Cyber Threat Monitoring Level I - TESDA">
+          <h3>Cyber Threat Monitoring Level I</h3>
+          <p>TESDA • May 30, 2026</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert3.jpg" alt="Cyber Threat Management - Cisco">
+          <h3>Cyber Threat Management</h3>
+          <p>Cisco • May 29, 2026</p>
+        </div>
 
-      <!-- 2025 -->
-      <div class="cert-item">
-        <img src="./Images/cert4.jpg" alt="Microsoft Word for Work">
-        <h3>Microsoft Word for Work</h3>
-        <p>January 13, 2025</p>
-      </div>
+        <!-- 2025 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert4.jpg" alt="Microsoft Word for Work">
+          <h3>Microsoft Word for Work</h3>
+          <p>January 13, 2025</p>
+        </div>
 
-      <!-- 2024 -->
-      <div class="cert-item">
-        <img src="./Images/cert5.jpg" alt="Java Programming NC III - TESDA">
-        <h3>Java Programming NC III</h3>
-        <p>TESDA • February 26, 2024</p>
-      </div>
+        <!-- 2024 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert5.jpg" alt="Java Programming NC III - TESDA">
+          <h3>Java Programming NC III</h3>
+          <p>TESDA • February 26, 2024</p>
+        </div>
 
-      <!-- 2023 -->
-      <div class="cert-item">
-        <img src="./Images/cert6.jpg" alt="Basic Fundamentals of Database">
-        <h3>Basic Fundamentals of Database</h3>
-        <p>March 24, 2023</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert7.jpg" alt="Introduction to Artificial Intelligence - EROVOUTIKA">
-        <h3>Introduction to Artificial Intelligence</h3>
-        <p>EROVOUTIKA • March 01, 2023</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert8.jpg" alt="Social Impacts of Innovation - EROVOUTIKA">
-        <h3>Social Impacts of Innovation</h3>
-        <p>EROVOUTIKA • March 01, 2023</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert9.jpg" alt="Android App Using Android Studio Mobile App System">
-        <h3>Android App Using Android Studio Mobile App System</h3>
-        <p>February 26, 2023</p>
-      </div>
+        <!-- 2023 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert6.jpg" alt="Basic Fundamentals of Database">
+          <h3>Basic Fundamentals of Database</h3>
+          <p>March 24, 2023</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert7.jpg" alt="Introduction to Artificial Intelligence - EROVOUTIKA">
+          <h3>Introduction to Artificial Intelligence</h3>
+          <p>EROVOUTIKA • March 01, 2023</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert8.jpg" alt="Social Impacts of Innovation - EROVOUTIKA">
+          <h3>Social Impacts of Innovation</h3>
+          <p>EROVOUTIKA • March 01, 2023</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert9.jpg" alt="Android App Using Android Studio Mobile App System">
+          <h3>Android App Using Android Studio Mobile App System</h3>
+          <p>February 26, 2023</p>
+        </div>
 
-      <!-- 2022 -->
-      <div class="cert-item">
-        <img src="./Images/cert10.jpg" alt="SQL for Data Science">
-        <h3>SQL for Data Science</h3>
-        <p>November 02, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert11.jpg" alt="ACE COMMERCE ">
-        <h3>Develop a more systematic approach to identifying new growth oppotunities</h3>
-        <p>August 19, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert12.jpg" alt="C++ Programming for Absolute Beginners">
-        <h3>C++ Programming for Absolute Beginners</h3>
-        <p>August 29, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert13.jpg" alt="Introduction to Cloud: An Agile and Flexible Computing Service">
-        <h3>Introduction to Cloud: An Agile and Flexible Computing Service</h3>
-        <p>August 29, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert14.jpg" alt="Practice English Phrases to Express Your Goals and Ambitions">
-        <h3>Practice English Phrases to Express Your Goals and Ambitions</h3>
-        <p>August 25, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert15.jpg" alt="Journey to Becoming an AWS Cloud Practitioner">
-        <h3>Journey to Becoming an AWS Cloud Practitioner</h3>
-        <p>August 25, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert16.jpg" alt="I See You: In the Eyes of Hackers (Webinar)">
-        <h3>I See You: In the Eyes of Hackers (Webinar)</h3>
-        <p>August 20, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert17.jpg" alt="AWS-Tools for Building Startups">
-        <h3>AWS-Tools for Building Startups</h3>
-        <p>August 20, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert18.jpg" alt="Data Privacy Accountability and Compliance">
-        <h3>Data Privacy Accountability and Compliance</h3>
-        <p>August 19, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert19.jpg" alt="Skill up: Project Management - BREAD SOCIETY INTERNATIONAL">
-        <h3>Skill up: Project Management</h3>
-        <p>BREAD SOCIETY INTERNATIONAL • August 18, 2022</p>
-      </div>
-      <div class="cert-item">
-        <img src="./Images/cert20.jpg" alt="Best CyberSecurity Practices in AWS">
-        <h3>Best CyberSecurity Practices in AWS</h3>
-        <p>August 17, 2022</p>
-      </div>
+        <!-- 2022 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert10.jpg" alt="SQL for Data Science">
+          <h3>SQL for Data Science</h3>
+          <p>November 02, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert11.jpg" alt="ACE COMMERCE">
+          <h3>Develop a more systematic approach to identifying new growth opportunities</h3>
+          <p>August 19, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert12.jpg" alt="C++ Programming for Absolute Beginners">
+          <h3>C++ Programming for Absolute Beginners</h3>
+          <p>August 29, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert13.jpg" alt="Introduction to Cloud: An Agile and Flexible Computing Service">
+          <h3>Introduction to Cloud: An Agile and Flexible Computing Service</h3>
+          <p>August 29, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert14.jpg" alt="Practice English Phrases to Express Your Goals and Ambitions">
+          <h3>Practice English Phrases to Express Your Goals and Ambitions</h3>
+          <p>August 25, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert15.jpg" alt="Journey to Becoming an AWS Cloud Practitioner">
+          <h3>Journey to Becoming an AWS Cloud Practitioner</h3>
+          <p>August 25, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert16.jpg" alt="I See You: In the Eyes of Hackers (Webinar)">
+          <h3>I See You: In the Eyes of Hackers (Webinar)</h3>
+          <p>August 20, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert17.jpg" alt="AWS-Tools for Building Startups">
+          <h3>AWS-Tools for Building Startups</h3>
+          <p>August 20, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert18.jpg" alt="Data Privacy Accountability and Compliance">
+          <h3>Data Privacy Accountability and Compliance</h3>
+          <p>August 19, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert19.jpg" alt="Skill up: Project Management - BREAD SOCIETY INTERNATIONAL">
+          <h3>Skill up: Project Management</h3>
+          <p>BREAD SOCIETY INTERNATIONAL • August 18, 2022</p>
+        </div>
+        <div class="cert-item">
+          <img src="./Images/cert20.jpg" alt="Best CyberSecurity Practices in AWS">
+          <h3>Best CyberSecurity Practices in AWS</h3>
+          <p>August 17, 2022</p>
+        </div>
 
-      <!-- 2021 -->
-      <div class="cert-item">
-        <img src="./Images/cert21.jpg" alt="Lead-X Academy - Leadership Classes">
-        <h3>Lead-X Academy - Leadership Classes</h3>
-        <p>January 16, 2021</p>
-      </div>
+        <!-- 2021 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert21.jpg" alt="Lead-X Academy - Leadership Classes">
+          <h3>Lead-X Academy - Leadership Classes</h3>
+          <p>January 16, 2021</p>
+        </div>
 
-      <!-- 2020 -->
-      <div class="cert-item">
-        <img src="./Images/cert22.jpg" alt="Next Normal Leadership: Virtual Youth Conference">
-        <h3>Next Normal Leadership: Virtual Youth Conference</h3>
-        <p>September 05, 2020</p>
+        <!-- 2020 Certificates -->
+        <div class="cert-item">
+          <img src="./Images/cert22.jpg" alt="Next Normal Leadership: Virtual Youth Conference">
+          <h3>Next Normal Leadership: Virtual Youth Conference</h3>
+          <p>September 05, 2020</p>
+        </div>
       </div>
-    </div>
-  </div>
 
       <div class="next-btn-wrapper">
         <a href="#portfolio" class="btn next-btn">Next Section <i class="fas fa-chevron-down"></i></a>
@@ -355,7 +375,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
-  <!-- PORTFOLIO GALLERY -->
+  <!-- =============================================
+  PORTFOLIO SECTION: List of projects and link to full project page
+  ============================================= -->
   <section class="section bg-light" id="portfolio">
     <div class="container">
       <h2>My Portfolio & Projects</h2>
@@ -384,13 +406,22 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
         </div>
       </div>
 
+      <!-- ✅ ADDED: Button to open full projects page -->
+      <div class="next-btn-wrapper" style="margin-top: 30px;">
+        <a href="https://christmarkbarlamprojects.my.canva.site/" target="_blank" class="btn view-all-btn">
+          <i class="fas fa-folder-open"></i> View All Projects & Documentations
+        </a>
+      </div>
+
       <div class="next-btn-wrapper">
         <a href="#faq" class="btn next-btn">Next Section <i class="fas fa-chevron-down"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
+  <!-- =============================================
+  FAQ SECTION: Frequently asked questions
+  ============================================= -->
   <section class="section" id="faq">
     <div class="container">
       <h2>Frequently Asked Questions</h2>
@@ -437,7 +468,9 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- =============================================
+  CONTACT SECTION: Contact details and social media links
+  ============================================= -->
   <section class="section bg-light" id="contact">
     <div class="container">
       <h2>Contact Information</h2>
@@ -450,11 +483,18 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
         <p><i class="fas fa-envelope"></i> christmarkbarlam@gmail.com</p>
         <p><i class="fas fa-globe"></i> https://christmarkbarlam-main.cardd.co/</p>
         
+        <!-- ✅ UPDATED: Replaced Messenger with Facebook icon and link -->
         <div class="contact-links">
-          <a href="#" class="https://www.facebook.com/ChristmarkBarlam08/"><i class="fab fa-facebook-messenger"></i> Messenger</a>
+          <a href="https://www.facebook.com/ChristmarkBarlam08/" target="_blank" class="contact-link">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
           <a href="#" class="contact-link"><i class="fab fa-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com/in/christmark-barlam-67113b28b" class="contact-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="https://github.com/Genesis5020" class="contact-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/christmark-barlam-67113b28b" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/Genesis5020" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
 
@@ -464,6 +504,7 @@ UPDATED: Dark mode button visible always + added profile image + scrollable cert
     </div>
   </section>
 
+  <!-- Link to JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>

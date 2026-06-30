@@ -1,24 +1,32 @@
 /* 
 =============================================
 FILE NAME: style.css
-UPDATED: Added horizontal scrollable certificate gallery
+PURPOSE: Controls all design, layout, colors, and responsiveness
+UPDATED: Added styles for new buttons, clear comments for each section
 =============================================
 */
 
-/* ------ GENERAL SETTINGS ------ */
+/* --------------------------
+BASE COLORS & VARIABLES
+These make it easy to change colors in one place
+-------------------------- */
 :root {
-  --primary: #0f172a;
-  --secondary: #1e293b;
-  --accent: #0ea5e9;
-  --highlight: #38bdf8;
-  --gold: #f59e0b;
-  --text: #334155;
-  --light: #f8fafc;
-  --white: #ffffff;
-  --shadow: 0 4px 12px rgba(0,0,0,0.1);
-  --transition: all 0.3s ease;
+  --primary: #0f172a;       /* Main dark blue color */
+  --secondary: #1e293b;     /* Secondary dark color */
+  --accent: #0ea5e9;        /* Bright blue highlight */
+  --highlight: #38bdf8;     /* Lighter blue hover effect */
+  --gold: #f59e0b;          /* Gold accent color */
+  --text: #334155;          /* Normal text color */
+  --light: #f8fafc;         /* Light background */
+  --white: #ffffff;         /* White background */
+  --shadow: 0 4px 12px rgba(0,0,0,0.1); /* Standard shadow */
+  --transition: all 0.3s ease; /* Smooth animation speed */
 }
 
+/* --------------------------
+DARK MODE COLORS
+Applied when dark mode is turned on
+-------------------------- */
 .dark-mode {
   --primary: #000000;
   --secondary: #0a0a0a;
@@ -30,7 +38,10 @@ UPDATED: Added horizontal scrollable certificate gallery
   --shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
-/* ✅ STARRY BACKGROUND — ONLY VISIBLE IN DARK MODE */
+/* --------------------------
+STARRY BACKGROUND
+Only visible in Dark Mode
+-------------------------- */
 .bg {
     position: fixed;
     top: 0;
@@ -48,6 +59,10 @@ UPDATED: Added horizontal scrollable certificate gallery
   display: block;
 }
 
+/* --------------------------
+GENERAL RESET & BASE STYLES
+Removes default browser styles and sets base font
+-------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +83,10 @@ body {
   padding: 0 20px;
 }
 
-/* ------ HEADER STYLE ------ */
+/* --------------------------
+HEADER SECTION STYLES
+Design for top part with profile and name
+-------------------------- */
 .header {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--white);
@@ -86,7 +104,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* ✅ PROFILE IMAGE STYLING */
+/* Profile Image Style */
 .profile-img img {
   width: 180px;
   height: 180px;
@@ -117,7 +135,10 @@ body {
   margin-top: 20px;
 }
 
-/* ------ BUTTON STYLE ------ */
+/* --------------------------
+BUTTON STYLES
+Shared design for all buttons
+-------------------------- */
 .btn {
   display: inline-block;
   background: var(--accent);
@@ -138,18 +159,27 @@ body {
   box-shadow: var(--shadow);
 }
 
-.download-btn {
+/* Special style for Cyber Lab button */
+.project-btn {
   background: var(--gold);
 }
 
-.download-btn:hover {
+.project-btn:hover {
   background: #fbbf24;
 }
 
-/* ✅ DARK MODE BUTTON — ALWAYS VISIBLE */
+/* Special style for View All Projects button */
+.view-all-btn {
+  background: var(--secondary);
+}
+
+.view-all-btn:hover {
+  background: var(--primary);
+}
+
+/* Dark Mode Button */
 .dark-mode-btn {
   background: var(--secondary);
-  display: inline-block;
 }
 
 .dark-mode-btn:hover {
@@ -161,7 +191,10 @@ body {
   margin-top: 40px;
 }
 
-/* ------ NAVIGATION ------ */
+/* --------------------------
+NAVIGATION MENU STYLES
+Fixed menu at the top when scrolling
+-------------------------- */
 .nav-buttons {
   background: var(--primary);
   padding: 15px 0;
@@ -178,7 +211,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* ✅ NAV LINKS — BRIGHT & VISIBLE IN DARK MODE */
 .nav-btn {
   background: transparent;
   color: #ffffff !important;
@@ -198,7 +230,10 @@ body {
   text-shadow: none;
 }
 
-/* ------ SECTION STYLE ------ */
+/* --------------------------
+GENERAL SECTION STYLES
+Used for all main content areas
+-------------------------- */
 .section {
   padding: 60px 0;
   position: relative;
@@ -253,7 +288,10 @@ h2::after {
   margin-left: 20px;
 }
 
-/* ------ SKILLS GRID ------ */
+/* --------------------------
+SKILLS GRID LAYOUT
+Cards showing different skills
+-------------------------- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -280,7 +318,10 @@ h2::after {
   margin-bottom: 15px;
 }
 
-/* ------ TIMELINE ------ */
+/* --------------------------
+TIMELINE LAYOUT
+For experience section
+-------------------------- */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -316,7 +357,9 @@ h2::after {
   box-shadow: var(--shadow);
 }
 
-/* ------ EDUCATION ------ */
+/* --------------------------
+EDUCATION SECTION
+-------------------------- */
 .education-list .edu-item {
   background: var(--white);
   padding: 20px;
@@ -325,14 +368,16 @@ h2::after {
   margin-bottom: 15px;
 }
 
-/* ------ ✅ SCROLLABLE CERTIFICATE GALLERY ------ */
+/* --------------------------
+CERTIFICATE GALLERY
+Horizontal scrollable design
+-------------------------- */
 .cert-gallery {
   display: flex;
   gap: 20px;
   overflow-x: auto;
   padding: 20px 10px;
   scroll-behavior: smooth;
-  /* Custom scrollbar style */
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--light);
 }
@@ -380,7 +425,9 @@ h2::after {
   color: var(--text);
 }
 
-/* ------ PORTFOLIO ------ */
+/* --------------------------
+PORTFOLIO GRID
+-------------------------- */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -416,7 +463,9 @@ h2::after {
   font-size: 0.9rem;
 }
 
-/* ------ FAQ STYLE ------ */
+/* --------------------------
+FAQ SECTION
+-------------------------- */
 .faq-item {
   margin-bottom: 15px;
   border: 1px solid var(--accent);
@@ -465,7 +514,9 @@ h2::after {
   text-align: center;
 }
 
-/* ------ CONTACT SECTION ------ */
+/* --------------------------
+CONTACT SECTION
+-------------------------- */
 .contact-details {
   text-align: center;
   font-size: 1.1rem;
@@ -503,28 +554,69 @@ h2::after {
   background: var(--accent);
 }
 
-/* ------ RESPONSIVE DESIGN ------ */
+/* --------------------------
+MOBILE RESPONSIVE DESIGN
+Adjustments for small screens
+-------------------------- */
 @media (max-width: 768px) {
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
+
+  .profile-img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Make nav scrollable horizontally on mobile */
+  .nav-buttons {
+    padding: 8px 0;
+  }
+
   .nav-buttons .container {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-bottom: 6px;
   }
+
+  .nav-buttons .container::-webkit-scrollbar {
+    height: 3px;
+  }
+  .nav-buttons .container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* Prevent content from being hidden under fixed menu */
+  .section {
+    padding-top: 85px;
+  }
+
   .contact-links {
     flex-direction: column;
     gap: 10px;
   }
+
   .timeline::before {
     left: 20px;
   }
+
   .timeline-item {
     padding-left: 40px;
   }
+
   .cert-gallery {
     padding: 10px;
   }
+
   .cert-item {
     width: 220px;
   }

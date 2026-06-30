@@ -1,11 +1,13 @@
 /* 
 =============================================
 FILE NAME: script.js
+PURPOSE: Adds interactivity and functions to the website
 =============================================
 */
 
 // =============================================
-// 1. FAQ TOGGLE
+// 1. FAQ TOGGLE FUNCTION
+// Makes questions clickable to show/hide answers
 // =============================================
 document.querySelectorAll('.faq-question').forEach(question => {
   question.addEventListener('click', () => {
@@ -15,7 +17,8 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 // =============================================
-// 2. SMOOTH SCROLL
+// 2. SMOOTH SCROLL FUNCTION
+// Makes jumping between sections smooth instead of sudden
 // =============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -35,17 +38,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // =============================================
-// 3. DARK MODE TOGGLE
+// 3. DARK MODE TOGGLE FUNCTION
+// Turns dark mode on/off and saves preference
 // =============================================
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
-// Load saved preference
+// Load saved setting from browser storage
 if (localStorage.getItem('darkMode') === 'enabled') {
   body.classList.add('dark-mode');
   darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
+// Toggle when button is clicked
 darkModeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   if (body.classList.contains('dark-mode')) {
